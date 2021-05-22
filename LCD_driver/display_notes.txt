@@ -1,0 +1,32 @@
+E= 0->1 clock bits
+
+RS=0 : write instructions
+RS=1 : write data
+
+
+
+Init:
+
+0010 = 0x2            // set 4-bit
+0010,1000 = 0x2, 0x8	// set 4-bit & 2 lines
+0000,1110 = 0x0, 0xE
+0000,0110 = 0x0, 0x6
+
+Display: 
+0100,1000 = 0x4, 0x8   // write 'H'
+0100,1001 = 0x4, 0x9   // write 'I'
+
+
+Function Set: 0x2, 0x8
+Display ctrl: 0x0, 0xF
+Clear disply: 0x0, 0x1
+
+
+N=1    = 2line
+F=0    = 5x8
+DL=0   = 4-bit
+D=1    = display ON
+C=1    = cursor ON
+B=1    = Blink ON
+ID=1   = inc 1
+S=1    = shift
